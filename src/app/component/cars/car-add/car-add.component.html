@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <h2>Add New Car</h2>
+    <form (submit)="onSubmit()">
+        <div class="mb-3">       
+            <label for="carModel" class="form-label">Image URL :</label>
+            <input type="image" class="form-control" id="image" >
+          </div>
+      <div class="mb-3">
+        
+        <label for="carModel" class="form-label">Car Model name:</label>
+        <input type="text" class="form-control" id="carModel" [(ngModel)]="carModel" required>
+      </div>
+      <div class="mb-3">
+        <label for="carMake" class="form-label">Car Make:</label>
+        <input type="text" class="form-control" id="carMake" [(ngModel)]="carMake" required>
+      </div>
+      <div class="mb-3">
+        <label for="carYear" class="form-label">Car Year:</label>
+        <input type="number" class="form-control" id="carYear" [(ngModel)]="carYear" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Car</button>
+    </form>
+  </div>
+  

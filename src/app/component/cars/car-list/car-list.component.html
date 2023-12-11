@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>matricule</th>
+            <th>name</th>
+            <th>CarModel</th>
+            <th>carMake</th>
+            <th>transmission</th>          
+            <th>CarYear</th>
+            <th>availableDate</th>
+            <th>DaylyRate </th>
+
+
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Display each car using ngFor -->
+          <tr *ngFor="let car of cars">
+            <td>{{ car.matricule }}</td>
+            <td>{{ car.name }}</td>
+            <td>{{ car.CarModel }}</td>
+            <td>{{ car.transmission }}</td>
+            <td>{{ car.availableDate}}</td>
+            <td>{{ car.DaylyRate}}</td>
+            <td>
+              <button class="btn btn-primary" (click)="editCar(car.matricule)">Edit</button>
+              <button class="btn btn-danger" (click)="deleteCar(car.matricule)">Delete</button>              
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

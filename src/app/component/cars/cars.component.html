@@ -1,0 +1,31 @@
+
+<div class="container-fluid img-thumbnail" style="background-image: url('https://img.freepik.com/photos-gratuite/muscle-car-bleue-noire-plaque-immatriculation-qui-dit-trans-devant_1340-23399.jpg'); background-size: cover; background-position: 50% -25px;" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+
+    <div class="row">
+        <div class="col-md-12 text-center text-white mb-4">
+            <h2 class="display-4">Find Your Dream Car</h2>
+        </div>
+
+        <div class="col-md-4 d-flex align-items-center p-5">
+            <div>
+                <h2>Car Reservation</h2>
+                <h3>Make your trip</h3>
+
+                <form (ngSubmit)="onReserveCar()">
+                    <div class="form-group">
+                        <label for="pickupDate">Pickup Date:</label>
+                        <input type="date" id="pickupDate" [(ngModel)]="pickupDate" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="returnDate">Return Date:</label>
+                        <input type="date" id="returnDate" [(ngModel)]="returnDate" class="form-control" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+       
+    </div>
+</div>

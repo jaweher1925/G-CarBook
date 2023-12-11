@@ -1,0 +1,59 @@
+<div class="container mt-4">
+    <!-- Hero Section -->
+    <div class="hero-wrap img-thumbnail" style="background-image: url('https://img.freepik.com/photos-gratuite/muscle-car-bleue-noire-plaque-immatriculation-qui-dit-trans-devant_1340-23399.jpg'); background-size: cover; background-position: 50% -25px;" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <form id="form" class="row">
+        <div class="col-md-12 text-center text-white mb-4">
+            <h2>Fast & Easy Way To Rent A Car</h2>
+         
+        </div>
+      </form>
+    </div>
+  
+    
+    <div class="container mt-3">
+      <div class="row car-list-home-container">
+      
+        <div *ngFor="let car of cars" class="col-3">
+          <div class="card">
+            <img [src]="car.imageUrl" class="card-img-top" alt="Car Image">
+            <div class="card-body">
+              <div class="car-list-card-description-reviews">
+                <div class="car-list-card-description-reviews-icon"><i class="fa fa-star" aria-hidden="true"></i></div>
+                <div class="car-list-card-description-reviews-value">{{ car.rating }}</div>
+              </div>
+              <h5 class="card-title car-list-card-description-title">{{ car.model }} {{ car.year }}</h5>
+              <div class="car-list-card-description-properties">
+                <div class="car-list-card-description-properties-property">
+                  {{ car.transmission }}
+                  <div class="property-point"></div>
+                </div>
+                <div class="car-list-card-description-properties-property">
+                  {{ car.fuel }}
+                  <div class="property-point"></div>
+                </div>
+                <div class="car-list-card-description-properties-property">
+                  {{ car.seats }} Seats
+                </div>
+              </div>
+              <div class="car-wrap rounded ftco-animate fadeInUp ftco-animated">
+                <div class="img rounded d-flex align-items-end" [style.background-image]="'url(' + car.imageUrl + ')'"></div>
+                <div class="text">
+                  <h2 class="mb-0"><a [routerLink]="['/car', car.id]">{{ car.brand }} {{ car.model }}</a></h2>
+                  <div class="d-flex mb-3">
+                    <span class="cat">{{ car.category }}</span>
+                    <p class="price ml-auto">{{ car.price }} <span>/day</span></p>
+                  </div>
+                  <p class="d-flex mb-0 d-block">
+                    <a routerLink="/login" class="btn btn-primary py-2 mr-1">Book now</a>
+                    <a [routerLink]="['/car', car.id]" class="btn btn-secondary py-2 ml-1">Details</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

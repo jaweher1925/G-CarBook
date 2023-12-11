@@ -1,0 +1,26 @@
+<!-- car-reservation.component.html -->
+<div>
+    <h2>Car Reservation</h2>
+  
+    <form (ngSubmit)="onReserveCar()">
+      <div class="form-group">
+        <label for="pickupDate">Pickup Date:</label>
+        <input type="date" id="pickupDate" [(ngModel)]="pickupDate" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate" [(ngModel)]="returnDate" class="form-control" required>
+      </div>
+  
+      <div class="form-group">
+        <label>Additional Options:</label>
+        <div *ngFor="let option of availableOptions">
+          <input type="checkbox" [(ngModel)]="additionalOptions" [value]="option"> {{ option }}
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary">Reserve Car</button>
+    </form>
+  </div>
+  

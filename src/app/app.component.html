@@ -1,0 +1,35 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!--navbar-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary ">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="./assets/img1.png" alt="Logo" height="100" width="100" class="d-inline-block align-top">
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a routerLink="/services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a routerLink='/car' class="nav-link">Cars</a></li>
+        <li class="nav-item">
+          <button class="btn btn-outline-light mx-2" routerLink='/login' type="button">Login</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-success" routerLink='/register' (click)="openRegister()" type="button">Register</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--/navbar-->
+
+<div class="container pt-5">
+  <router-outlet></router-outlet>
+
+</div>
